@@ -1,5 +1,5 @@
 <nav>
-    <ul>
+    <ul class="nav-list">
         <li>
             <a href="index.php">
                 <img class="team_logo" src="images/real madrid logo.png" alt="Real Madrid logo">
@@ -24,5 +24,8 @@
             <a href="contact.php">Contact</a>
         </li>
     </ul>
-    <a class="login_button" href="">Log in</a>
+    <a class="login_button" href="">
+    <!-- <a href="https://www.flaticon.com/free-icons/login" title="login icons">ceva</a> -->
+        Sign in
+    </a>
 </nav>

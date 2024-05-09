@@ -6,7 +6,7 @@ nav {
     font-weight: bold;
 }
 
-ul {
+.nav-list {
     list-style: none;
     display: flex;
     align-items: center;
@@ -15,31 +15,37 @@ ul {
 
 .login_button {
     text-decoration: none;
-    color: #3E31FA;
+    color: #43526e;
     margin-left: auto;
     margin-right: 65px;
-    border: 2px solid #3E31FA;
-    border-radius: 10px;
+    border: 2px solid #43526e;
+    border-radius: 100px;
     min-height: 49px;
-    min-width: 80px;
+    min-width: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-li {
+.login_button:hover {
+    color: #3e31fa;
+    border-color: #3e31fa;
+}
+
+.nav-list li {
     margin: 0 25px;
 }
 
-li > a {
+.nav-list li > a {
     text-decoration: none;
-    color: #43526E;
+    color: #43526e;
 }
 
-li > a:hover {
-    color: #3E31FA;
+.nav-list li > a:hover {
+    color: #3e31fa;
 }
 
-li img {
+.nav-list li img {
     height: 45px;
+    width: auto;
 }
