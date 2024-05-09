@@ -1,0 +1,45 @@
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.login_button {
+    text-decoration: none;
+    color: #3E31FA;
+    margin-left: auto;
+    margin-right: 65px;
+    border: 2px solid #3E31FA;
+    border-radius: 10px;
+    min-height: 49px;
+    min-width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    margin: 0 25px;
+}
+
+li > a {
+    text-decoration: none;
+    color: #43526E;
+}
+
+li > a:hover {
+    color: #3E31FA;
+}
+
+li img {
+    height: 45px;
+}
