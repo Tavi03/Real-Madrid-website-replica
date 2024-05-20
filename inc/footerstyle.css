@@ -1,4 +1,11 @@
+html {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     margin: 0;
 }
 
@@ -6,10 +13,9 @@ footer {
     width: 100%;
     min-height: 100px;
     /* background-color: lightblue; */
-    position: static;
     display: flex;
     align-items: center;
-    margin-top: 50px;
+    margin-top: auto;
     /* bottom: 0; */
 }
 

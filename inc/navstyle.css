@@ -1,6 +1,6 @@
 nav {
+    min-height: 10vh;
     font-family: Arial, Helvetica, sans-serif;
-    height: 10vh;
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -20,8 +20,8 @@ nav {
     margin-right: 65px;
     border: 2px solid #43526e;
     border-radius: 100px;
-    min-height: 49px;
-    min-width: 800px;
+    min-height: 40px;
+    min-width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;

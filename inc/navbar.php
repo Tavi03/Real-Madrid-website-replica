@@ -25,7 +25,6 @@
         </li>
     </ul>
     <a class="login_button" href="">
-    <!-- <a href="https://www.flaticon.com/free-icons/login" title="login icons">ceva</a> -->
         Sign in
     </a>
 </nav>
