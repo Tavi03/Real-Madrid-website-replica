@@ -2,7 +2,7 @@
     <ul class="nav-list">
         <li>
             <a href="index.php">
-                <img class="team_logo" src="images/real madrid logo.png" alt="Real Madrid logo">
+                <img class="team_logo" src="images/nav-footer/real madrid logo.png" alt="Real Madrid logo">
             </a>
         </li>
         <li>

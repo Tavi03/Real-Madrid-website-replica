@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "RM Neue Bold", "RM Neue";
 }
 
 .main-page {
@@ -17,7 +17,7 @@ body {
     /* justify-content: center; */
     align-items: center;
     margin-top: 30px;
-    width: 80%;
+    width: 85%;
     background-color: #f3f5f8;
     border-radius: 50px;
 }
@@ -28,13 +28,15 @@ body {
     margin: 0;
     padding: 0;
     color: #0f2145;
-    margin: 0 20px;
+    margin: 0 30px;
 }
 
 .main-image {
-    width: 800px;
+    width: 60%;
     height: auto;
-    border-radius: 50px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    /* border-radius: 50px; */
 }
 
 .secondary-article {
@@ -43,15 +45,17 @@ body {
     align-items: center;
     margin-top: 30px;
     width: 70%;
+    height: 300px;
     background-color: #f3f5f8;
     border-radius: 50px;
 }
 
 .secondary-article-image {
-    width: 300px;
-    height: auto;
+    height: 100%;
+    width: auto;
     margin-left: auto;
-    border-radius: 50px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .secondary-article h2 {
@@ -60,5 +64,97 @@ body {
     margin: 0;
     padding: 0;
     color: #0f2145;
-    margin: 0 20px;
+    margin: 0 60px;
+}
+
+.separator {
+    margin: 100px 0;
+    height: 160px;
+    width: 100%;
+    background-color: #e1e5ea;
+}
+
+.trophies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #3e31fa;
+}
+
+.trophies-card {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 100px 0;
+    padding: 0;
+}
+
+/* #3e31fa - titles category color */
+.trophies > h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3e31fa;
+    padding: 0;
+    margin: 0;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.titles-won {
+    display: flex;
+    gap: 2.5rem;
+    /* flex-direction: column; */
+    margin: 20px 0;
+    width: 100%;
+}
+
+.titles-won > img {
+    width: 60%;
+    height: auto;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.titles-list > p {
+    font-size: x-large;
+    margin: 0;
+}
+
+.titles-list ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 250px;
+}
+
+.titles-list ol li {
+    color: #5e6a83;
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+.trophies-number {
+    display: flex;
+    align-items: center;
+    gap: 0.23rem;
+    font-size: xx-large;
+    color: #0f2145;
+}
+
+.trophies-number span {
+    align-items: center;
+}
+
+.title-card p {
+    margin: 0;
+}
+
+.list-columns {
+    display: flex;
+    gap: 1.5rem;
 }
