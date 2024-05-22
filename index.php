@@ -1,14 +1,16 @@
-<?php
-include "header.php";
-?>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <?php include "header.php"; ?>
+    <link rel="stylesheet" href="styles/indexstyle.css">
+    <title>Real Madrid C.F.</title>
+</head>
 
 <body>
-    <?php
-    include "navbar/navbar.php";
-    ?>
+    <?php include "navbar/navbar.php"; ?>
 
-    <!-- content -->
+    <!-- Content -->
     <div class="main-page">
         <div class="main-article">
             <img class="main-image" src="images/home/main image.jpg" alt="main image">
@@ -17,13 +19,15 @@ include "header.php";
 
         <div class="secondary-article">
             <h2>Hai să susținem echipa în finala Champions League de pe Wembley!</h2>
-            <img class="secondary-article-image" src="images/home/champions league.jpg" alt="champions league starting 11">
+            <img class="secondary-article-image" src="images/home/champions league.jpg"
+                alt="champions league starting 11">
         </div>
 
         <div class="secondary-article">
             <h2>Real Madrid, recunoscută de Villareal drept campioană înaintea meciului de pe Estadio de la Cerámica
             </h2>
-            <img src="images/home/villarreal real madrid.jpg" alt="villarreal - real madrid" class="secondary-article-image">
+            <img src="images/home/villarreal real madrid.jpg" alt="villarreal - real madrid"
+                class="secondary-article-image">
         </div>
     </div>
 
@@ -239,7 +243,5 @@ include "header.php";
         </div>
     </div>
 
-    <?php
-    include "footer/footer.php";
-    ?>
+    <?php include "footer/footer.php"; ?>
 </body>

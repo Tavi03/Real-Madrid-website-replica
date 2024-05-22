@@ -45,14 +45,14 @@ body {
     align-items: center;
     margin-top: 30px;
     width: 70%;
-    height: 300px;
+    /* height: 300px; */
     background-color: #f3f5f8;
     border-radius: 50px;
 }
 
 .secondary-article-image {
-    height: 100%;
-    width: auto;
+    width: 50%;
+    height: auto;
     margin-left: auto;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
