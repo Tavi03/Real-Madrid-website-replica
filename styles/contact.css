@@ -1,0 +1,32 @@
+body {
+    font-family: "RM Neue Bold", "RM Neue";
+    color: #0f2145;
+}
+
+.header {
+    display: flex;
+    border-bottom: 3px solid #f3f5f8;
+}
+
+.header h1 {
+    margin: 68px 0 0 89px;
+    font-size: 3rem;
+}
+
+.header img {
+    margin-left: auto;
+    margin-top:auto;
+    height: 150px;
+    width: auto;
+}
+
+.content {
+    margin-left: 120px;
+}
+
+.content p {
+    margin: 20px 0;
+    font-size: 1.25rem;
+    color: #43526e;
+    font-family: "RM Neue Light";
+}

@@ -1,10 +1,12 @@
 nav {
     min-height: 10vh;
     font-family: "RM Neue Bold", "RM Neue";
-    font-size: large;
+    font-size: medium;
     display: flex;
     align-items: center;
     font-weight: bold;
+    border-bottom: 2px solid #f3f5f8;
+    letter-spacing: 0.0469rem;
 }
 
 .nav-list {
@@ -16,13 +18,13 @@ nav {
 
 .login_button {
     text-decoration: none;
-    color: #43526e;
+    color: #3e31fa; 
     margin-left: auto;
     margin-right: 65px;
-    border: 2px solid #43526e;
-    border-radius: 100px;
+    border: 2px solid #3e31fa;
+    border-radius: 10px;
     min-height: 40px;
-    min-width: 80px;
+    min-width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,6 +33,10 @@ nav {
 .login_button:hover {
     color: #3e31fa;
     border-color: #3e31fa;
+}
+
+.login_button svg {
+    margin-right: 5px;
 }
 
 .nav-list li {
