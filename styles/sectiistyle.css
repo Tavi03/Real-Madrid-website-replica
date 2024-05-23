@@ -24,38 +24,8 @@ body {
     width: auto;
 }
 
-.content {
-    /* margin-left: 15%; */
-    max-width: 42%;
-    align-self: center;
-}
-
-.content p {
-    margin: 20px 0;
-    font-size: 1.25rem;
-    color: #43526e;
-    font-family: "RM Neue Light";
-    font-weight: bold;
-    letter-spacing: 0;
-    line-height: 1.6;
-}
-
-.content h3 {
-    color: #29395a;
-    margin: 20px 0 12px 0;
-}
-
-.content a {
-    color: #3e31fa;
-    font-size: inherit;
-}
 
 @media screen and (max-width: 600px) {
-    .content {
-        margin-left: 10px;
-        align-self: auto;
-        max-width: 100%;
-    }
     .header {
         height: 7vh;
         align-items: center;
@@ -65,7 +35,13 @@ body {
         font-size: 2.5rem;
     }
 
+    /* .content {
+        margin-left: 10px;
+        align-self: auto;
+        max-width: 100%;
+    }
+
     .content p {
         font-size: 1rem;
-    }
+    } */
 }

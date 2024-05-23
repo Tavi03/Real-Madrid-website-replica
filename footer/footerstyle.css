@@ -43,3 +43,9 @@ footer {
     height: auto;
     margin-left: 60px;
 }
+
+@media screen and (max-width: 600px) {
+    .footer-logo{
+        margin-left: 10px;
+    }
+}

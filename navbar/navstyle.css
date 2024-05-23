@@ -1,5 +1,5 @@
 nav {
-    min-height: 10vh;
+    height: 8vh;
     font-family: "RM Neue Bold", "RM Neue";
     font-size: medium;
     display: flex;
@@ -55,4 +55,22 @@ nav {
 .nav-list li img {
     height: 45px;
     width: auto;
+}
+
+@media screen and (max-width: 600px) {
+    nav{
+        height: 13vh;
+    }
+    .nav-list li {
+        margin: 0 10px;
+    }
+    .nav-list {
+        padding: 0;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        justify-content: center;
+    }
+    .login_button {
+        margin-right: 10px;
+    }
 }
