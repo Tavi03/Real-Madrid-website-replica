@@ -12,11 +12,10 @@ body {
 footer {
     width: 100%;
     min-height: 100px;
-    /* background-color: lightblue; */
     display: flex;
     align-items: center;
     margin-top: auto;
-    /* bottom: 0; */
+    border-top: 2px solid #f3f5f8;
 }
 
 .footer-list {
@@ -45,7 +44,7 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-    .footer-logo{
+    .footer-logo {
         margin-left: 10px;
     }
 }

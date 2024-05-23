@@ -1,10 +1,8 @@
 <nav>
+    <a class="team_logo" href="index.php">
+        <img src="images/nav-footer/real madrid logo.png" alt="Real Madrid logo">
+    </a>
     <ul class="nav-list">
-        <li>
-            <a href="index.php">
-                <img class="team_logo" src="images/nav-footer/real madrid logo.png" alt="Real Madrid logo">
-            </a>
-        </li>
         <li>
             <a href="index.php">Home</a>
         </li>
