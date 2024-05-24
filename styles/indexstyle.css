@@ -61,7 +61,6 @@ body {
     width: 100%;
     font-size: 1.7rem;
     font-weight: bold;
-    margin: 0 60px;
     padding: 0 20px;
     text-align: center;
     color: #0f2145;
@@ -161,4 +160,38 @@ body {
 .list-columns {
     display: flex;
     gap: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .main-article {
+        flex-wrap: wrap;    
+    }
+
+    .main-article h1 {
+        font-size: 1.5rem;
+        padding: 0 20px
+    }
+
+    .main-image {
+        margin: 0 auto;
+        border-radius: 40px;
+    }
+
+    .secondary-article {
+        flex-wrap: wrap;
+    }
+
+    .secondary-article h2 {
+        padding: 0 20px;
+        font-size: 1.2rem;
+    }
+
+    .secondary-article-image {
+        margin: 0 auto;
+        border-radius: 40px;
+    }
+
+    .titles-won {
+        flex-wrap: wrap;
+    }
 }

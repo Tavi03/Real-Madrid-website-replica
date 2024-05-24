@@ -77,4 +77,10 @@ nav {
     .login_button {
         margin-right: 10px;
     }
+    
+    .team_logo img {
+        height: 35px;
+        width: auto;
+        margin-left: 15px;
+    }
 }

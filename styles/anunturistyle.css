@@ -1,0 +1,56 @@
+body {
+    font-family: "RM Neue Bold", "RM Neue", Arial;
+    color: #0f2145;
+}
+
+.header {
+    height: 15vh;
+    display: flex;
+    border-bottom: 3px solid #e3e3e3;
+    background-image: url("https://publish-p47754-e237306.adobeaemcloud.com/content/dam/common/statics/public-content/internet/web/rm-spa-web/images/header/bg-sub-header.app.png?$Desktop$&wid=1440"),
+        linear-gradient(90deg, #fbfdff, #fbfdff);
+}
+
+.header h1 {
+    margin-bottom: 0;
+    margin-top: 5vh;
+    margin-left: 22%;
+    font-size: 3rem;
+}
+
+.header img {
+    margin-left: auto;
+    margin-top: auto;
+    height: 100%;
+    width: auto;
+}
+
+.announcements {
+    display: flex;
+    justify-content: center;
+}
+
+.announcements ul {
+    width: 70%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.announcement-card {
+    list-style: none;
+    width: 45%;
+    background-color: #f3f5f8;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.announcement-card span {
+    width: 100%;
+    text-align: end;
+    color: rgb(224, 219, 219);
+    display: inline-block;
+}
