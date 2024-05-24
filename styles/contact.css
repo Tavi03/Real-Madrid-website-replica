@@ -12,7 +12,8 @@ body {
 }
 
 .header h1 {
-    margin-top: 68px;
+    margin-bottom: 0;
+    margin-top: 5vh;
     margin-left: 22%;
     font-size: 3rem;
 }
