@@ -22,7 +22,7 @@
             <a href="contact.php">Contact</a>
         </li>
     </ul>
-    <a class="login_button" href="">
+    <a class="login_button" href="admin/login.php">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person"
             viewBox="0 0 16 16">
             <path
