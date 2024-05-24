@@ -18,13 +18,13 @@
         </div>
 
         <div class="secondary-article">
-            <h2>Hai să susținem echipa în finala Champions League de pe Wembley!</h2>
+            <h2>Real Madrid este în finala Champions League de pe Wembley!</h2>
             <img class="secondary-article-image" src="images/home/champions league.jpg"
                 alt="champions league starting 11">
         </div>
 
         <div class="secondary-article">
-            <h2>Real Madrid, recunoscută de Villareal drept campioană înaintea meciului de pe Estadio de la Cerámica
+            <h2>Real Madrid, recunoscută de Villareal drept campioană în La Liga înaintea meciului de pe Estadio de la Cerámica
             </h2>
             <img src="images/home/villarreal real madrid.jpg" alt="villarreal - real madrid"
                 class="secondary-article-image">
