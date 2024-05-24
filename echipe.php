@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <?php include "header.php"?>
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/echipestyle.css">
+    <title>Real Madrid C.F. | Echipe</title>
 </head>
 <body>
     <!-- Navbar -->
@@ -18,7 +19,9 @@
     <!-- Header end -->
 
     <ul>
-        
+        <?php 
+            
+        ?>
     </ul>
 
     <!-- Footer -->

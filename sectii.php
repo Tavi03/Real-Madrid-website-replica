@@ -58,7 +58,7 @@
 
         <!-- Secondary card -->
         <div class="secondary-article">
-            <h2>Campioni Europeni la Baschet</h2>
+            <h2>Copa del Rey este din nou la Madrid</h2>
             <img class="secondary-article-image" src="images/sectii/basketball team2.jpg"
                 alt="basketball team copa del rey">
         </div>
