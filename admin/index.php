@@ -41,6 +41,7 @@
             include "login-form.php";
         } else {
             printf('<div class="user-account">Welcome <b>%s</b> | <a href="index.php?comanda=logout">Logout</a></div>', getLoggedUser());
+            printf('<div class="user-account"><a href="../index.php">Inapoi la pagina principala</a></div>');
             /* Userul e autentificat */
 
             // Adaugare, modificare si stergere anunturi
@@ -331,6 +332,8 @@
         }
         ?>
     </div>
+
+
 
 </body>
 

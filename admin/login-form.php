@@ -10,4 +10,5 @@
         <input type="password" name="parola" id="parola" size="30" value="">
     </div>
     <input type="submit" value="Login">
-  </form>
+    <div class="user-account"><a href="../index.php">Inapoi la pagina principala</a></div>
+</form>

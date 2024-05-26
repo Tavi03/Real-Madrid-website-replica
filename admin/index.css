@@ -9,11 +9,21 @@
 body {
     font-family: "RM Neue Bold", "RM Neue";
     margin: 0;
+    color:#0f2145;
 }
 
 .user-account {
     text-align: end;
     margin: 30px 100px;
+}
+
+.user-account a {
+    text-decoration: none;
+    color: #0f2145;
+}
+
+.user-account a:hover {
+    color: #3e31fa;
 }
 
 .login-container {
@@ -55,4 +65,8 @@ h1 {
 .list-buttons a {
     text-decoration: none;
     color: #43526e;
+}
+
+.list-buttons a:hover {
+    color: #3e31fa;
 }
