@@ -69,19 +69,22 @@ function deleteMesaj($id)
         return FALSE;
     }
 }
-function listMesaje()
+function listAnunturi()
 {
     global $id_conexiune;
-    $query = "SELECT id, mesaj, data FROM anunturi";
+    $query = "SELECT id, mesaj, data FROM anunturi order by data desc";
     $result = mysqli_query($id_conexiune, $query);
     if (mysqli_num_rows($result)) {
         while ($row = mysqli_fetch_array($result)) {
-            print (htmlspecialchars($row['id']));
-            print (htmlspecialchars($row['mesaj']));
-            print (htmlspecialchars($row['data']));
-            print ("<a href='login.php?comanda=delete&id=" . $row['id'] . "'>Delete</a>\n");
+            print ('<p>');
+            print ('<span>' . htmlspecialchars($row['id']) . '  </span>');
+            print ('<span>' . htmlspecialchars($row['mesaj']) . '   </span>');
+            print ('<span>' . htmlspecialchars($row['data']) . '    </span>');
+            print ("<a href='login.php?comanda=delete&id=" . $row['id'] . "'>Delete</a>\n");    
+            print ("<a href='login.php?comanda=modify&id=" . $row['id'] . "&mesaj=" . $row['mesaj'] . "'>Modifica</a>\n");
+            print ('</p>');
         }
     } else {
-        print "Nu exista mesaje!";
+        print "Nu exista anunturi!";
     }
 }

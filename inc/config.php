@@ -10,3 +10,4 @@ define('DB_HOST', 'localhost');
 define('DB_NAME', 'db_realmadrid');
 define('DB_USER', 'realmadriduser');
 define('DB_PASS', 'changeit');
+?>

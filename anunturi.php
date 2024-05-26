@@ -44,6 +44,8 @@
             ?>
         </div>
     </div>
+
+    <?php include DIR_BASE."footer/footer.php"?>
 </body>
 
 </html>

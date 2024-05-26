@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS anunturi (
     
 insert into anunturi (mesaj, data) values (
     "Real Madrid se pregateste de finala Champions League", 
-    "2024-05-24")
+    "2024-05-24");
 insert into anunturi (mesaj, data) values ("alt anunt", "2024-05-20");
 insert into anunturi (mesaj, data) values ("inca unu", "2023-05-20");
 insert into anunturi (mesaj, data) values ("si altu anunt", "2022-05-20");
