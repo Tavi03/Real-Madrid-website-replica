@@ -69,6 +69,37 @@ function deleteMesaj($id)
         return FALSE;
     }
 }
+
+function deleteFootballPlayer($id)
+{
+    global $id_conexiune;
+    if (is_numeric($id)) {
+        $sql = sprintf("DELETE FROM echipa_fotbal WHERE id=%d", $id);
+        //echo "Query: $sql <br>";
+        if (!mysqli_query($id_conexiune, $sql)) {
+            die('Error: ' . mysqli_error($id_conexiune));
+        }
+        return TRUE;
+    } else {
+        return FALSE;
+    }
+}
+
+function deleteBasketballPlayer($id)
+{
+    global $id_conexiune;
+    if (is_numeric($id)) {
+        $sql = sprintf("DELETE FROM echipa_baschet WHERE id=%d", $id);
+        //echo "Query: $sql <br>";
+        if (!mysqli_query($id_conexiune, $sql)) {
+            die('Error: ' . mysqli_error($id_conexiune));
+        }
+        return TRUE;
+    } else {
+        return FALSE;
+    }
+}
+
 function listAnunturi()
 {
     global $id_conexiune;
@@ -76,13 +107,13 @@ function listAnunturi()
     $result = mysqli_query($id_conexiune, $query);
     if (mysqli_num_rows($result)) {
         while ($row = mysqli_fetch_array($result)) {
-            print ('<p>');
-            print ('<span>' . htmlspecialchars($row['id']) . '  </span>');
-            print ('<span>' . htmlspecialchars($row['mesaj']) . '   </span>');
-            print ('<span>' . htmlspecialchars($row['data']) . '    </span>');
-            print ("<a href='login.php?comanda=delete_announcement&id=" . $row['id'] . "'>Delete</a>\n");    
-            print ("<a href='login.php?comanda=modify_announcement&id=" . $row['id'] . "&mesaj=" . $row['mesaj'] . "'>Modifica</a>\n");
-            print ('</p>');
+            print ('<div class ="list-item">');
+            print ('<p>' . htmlspecialchars($row['id']) . ' ' .  htmlspecialchars($row['mesaj']) . ' ' . htmlspecialchars($row['data']). '</p>');
+            print ('<div class="list-buttons">');
+            print ("<a href='index.php?comanda=delete_announcement&id=" . $row['id'] . "'>Delete</a>\n");
+            print ("<a href='index.php?comanda=modify_announcement&id=" . $row['id'] . "&mesaj=" . $row['mesaj'] . "'>Modifica</a>\n");
+            print ('</div>');
+            print ('</div>');
         }
     } else {
         print "Nu exista anunturi!";
@@ -92,17 +123,17 @@ function listAnunturi()
 function listJucatoriFotbal()
 {
     global $id_conexiune;
-    $query = "SELECT nume, post, numar_tricou FROM echipa_fotbal order by post desc";
+    $query = "SELECT id, nume, post, numar_tricou FROM echipa_fotbal order by post desc";
     $result = mysqli_query($id_conexiune, $query);
     if (mysqli_num_rows($result)) {
         while ($row = mysqli_fetch_array($result)) {
-            print ('<p>');
-            print ('<span>' . htmlspecialchars($row['nume']) . '  </span>');
-            print ('<span>' . htmlspecialchars($row['post']) . '   </span>');
-            print ('<span>' . htmlspecialchars($row['numar_tricou']) . '    </span>');
-            print ("<a href='login.php?comanda=delete_football_player&id=" . $row['id'] . "'>Delete</a>\n");    
-            print ("<a href='login.php?comanda=modify_football_player&id=" . $row['id'] . "&mesaj=" . $row['mesaj'] . "'>Modifica</a>\n");
-            print ('</p>');
+            print ('<div class="list-item">');
+            print ('<p>' . htmlspecialchars($row['post']) . ' - ' . htmlspecialchars($row['nume']) . ' - ' . htmlspecialchars($row['numar_tricou']). '</p>');
+            print ('<div class="list-buttons">');
+            print ("<a href='index.php?comanda=delete_football_player&id=" . $row['id'] . "'>Delete</a>\n");
+            print ("<a href='index.php?comanda=modify_football_player&id=" . $row['id'] . "&post=" . $row['post'] . "&nume=" . $row['nume'] . "&numar_tricou=" . $row['numar_tricou'] . "'>Modifica</a>\n");
+            print ('</div>');
+            print ('</div>');
         }
     } else {
         print "Nu exista jucatori de fotbal!";
@@ -112,17 +143,17 @@ function listJucatoriFotbal()
 function listJucatoriBaschet()
 {
     global $id_conexiune;
-    $query = "SELECT nume, post, numar_tricou FROM echipa_baschet order by post desc";
+    $query = "SELECT id, nume, post, numar_tricou FROM echipa_baschet order by post desc";
     $result = mysqli_query($id_conexiune, $query);
     if (mysqli_num_rows($result)) {
         while ($row = mysqli_fetch_array($result)) {
-            print ('<p>');
-            print ('<span>' . htmlspecialchars($row['nume']) . '  </span>');
-            print ('<span>' . htmlspecialchars($row['post']) . '   </span>');
-            print ('<span>' . htmlspecialchars($row['numar_tricou']) . '    </span>');
-            print ("<a href='login.php?comanda=delete_basketball_player&id=" . $row['id'] . "'>Delete</a>\n");    
-            print ("<a href='login.php?comanda=modify_basketball_player&id=" . $row['id'] . "&mesaj=" . $row['mesaj'] . "'>Modifica</a>\n");
-            print ('</p>');
+            print ('<div class="list-item">');
+            print ('<p>' . htmlspecialchars($row['post']) . ' - ' . htmlspecialchars($row['nume']) . ' - ' . htmlspecialchars($row['numar_tricou']). '</p>');
+            print ('<div class="list-buttons">');
+            print ("<a href='index.php?comanda=delete_basketball_player&id=" . $row['id'] . "'>Delete</a>\n");
+            print ("<a href='index.php?comanda=modify_basketball_player&id=" . $row['id'] . "&post=" . $row['post'] . "&nume=" . $row['nume'] . "&numar_tricou=" . $row['numar_tricou'] . "'>Modifica</a>\n");
+            print ('</div>');
+            print ('</div>');
         }
     } else {
         print "Nu exista jucatori de baschet!";

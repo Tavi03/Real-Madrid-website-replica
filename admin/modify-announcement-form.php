@@ -4,7 +4,7 @@ $eroareData = "";
 
 <h2>Modifica un anunt</h2>
 <!-- Forma de modificare a unui mesaj -->
-<form action="login.php" method="post">
+<form action="index.php" method="post">
     <input name="comanda" type="hidden" value="modify_announcement" />
     <input name="id" type="hidden" value="<?php echo htmlspecialchars($id); ?>" />
     <p>Mesaj: <span class="error"><?php echo $eroareMesaj; ?></span><br />
