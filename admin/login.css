@@ -1,9 +1,10 @@
-.login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 h1 {
     text-align: center;
+}
+
+.separator {
+    margin: 100px 0;
+    height: 160px;
+    width: 100%;
+    background-color: #e1e5ea;
 }

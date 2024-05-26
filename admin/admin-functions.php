@@ -80,11 +80,51 @@ function listAnunturi()
             print ('<span>' . htmlspecialchars($row['id']) . '  </span>');
             print ('<span>' . htmlspecialchars($row['mesaj']) . '   </span>');
             print ('<span>' . htmlspecialchars($row['data']) . '    </span>');
-            print ("<a href='login.php?comanda=delete&id=" . $row['id'] . "'>Delete</a>\n");    
-            print ("<a href='login.php?comanda=modify&id=" . $row['id'] . "&mesaj=" . $row['mesaj'] . "'>Modifica</a>\n");
+            print ("<a href='login.php?comanda=delete_announcement&id=" . $row['id'] . "'>Delete</a>\n");    
+            print ("<a href='login.php?comanda=modify_announcement&id=" . $row['id'] . "&mesaj=" . $row['mesaj'] . "'>Modifica</a>\n");
             print ('</p>');
         }
     } else {
         print "Nu exista anunturi!";
+    }
+}
+
+function listJucatoriFotbal()
+{
+    global $id_conexiune;
+    $query = "SELECT nume, post, numar_tricou FROM echipa_fotbal order by post desc";
+    $result = mysqli_query($id_conexiune, $query);
+    if (mysqli_num_rows($result)) {
+        while ($row = mysqli_fetch_array($result)) {
+            print ('<p>');
+            print ('<span>' . htmlspecialchars($row['nume']) . '  </span>');
+            print ('<span>' . htmlspecialchars($row['post']) . '   </span>');
+            print ('<span>' . htmlspecialchars($row['numar_tricou']) . '    </span>');
+            print ("<a href='login.php?comanda=delete_football_player&id=" . $row['id'] . "'>Delete</a>\n");    
+            print ("<a href='login.php?comanda=modify_football_player&id=" . $row['id'] . "&mesaj=" . $row['mesaj'] . "'>Modifica</a>\n");
+            print ('</p>');
+        }
+    } else {
+        print "Nu exista jucatori de fotbal!";
+    }
+}
+
+function listJucatoriBaschet()
+{
+    global $id_conexiune;
+    $query = "SELECT nume, post, numar_tricou FROM echipa_baschet order by post desc";
+    $result = mysqli_query($id_conexiune, $query);
+    if (mysqli_num_rows($result)) {
+        while ($row = mysqli_fetch_array($result)) {
+            print ('<p>');
+            print ('<span>' . htmlspecialchars($row['nume']) . '  </span>');
+            print ('<span>' . htmlspecialchars($row['post']) . '   </span>');
+            print ('<span>' . htmlspecialchars($row['numar_tricou']) . '    </span>');
+            print ("<a href='login.php?comanda=delete_basketball_player&id=" . $row['id'] . "'>Delete</a>\n");    
+            print ("<a href='login.php?comanda=modify_basketball_player&id=" . $row['id'] . "&mesaj=" . $row['mesaj'] . "'>Modifica</a>\n");
+            print ('</p>');
+        }
+    } else {
+        print "Nu exista jucatori de baschet!";
     }
 }
