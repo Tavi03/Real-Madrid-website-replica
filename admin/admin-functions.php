@@ -108,7 +108,7 @@ function listAnunturi()
     if (mysqli_num_rows($result)) {
         while ($row = mysqli_fetch_array($result)) {
             print ('<div class ="list-item">');
-            print ('<p>' . htmlspecialchars($row['id']) . ' ' .  htmlspecialchars($row['mesaj']) . ' ' . htmlspecialchars($row['data']). '</p>');
+            print ('<p>' . htmlspecialchars($row['id']) . ' ' .  htmlspecialchars($row['mesaj']) . '<br>' . htmlspecialchars($row['data']). '</p>');
             print ('<div class="list-buttons">');
             print ("<a href='index.php?comanda=delete_announcement&id=" . $row['id'] . "'>Delete</a>\n");
             print ("<a href='index.php?comanda=modify_announcement&id=" . $row['id'] . "&mesaj=" . $row['mesaj'] . "'>Modifica</a>\n");

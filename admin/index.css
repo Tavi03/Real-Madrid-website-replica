@@ -44,7 +44,7 @@ h1 {
 }
 
 .section {
-    width: 50%;
+    width: 55%;
     margin: 100px auto;
 }
 
@@ -52,10 +52,12 @@ h1 {
     font-size: 1.2rem;
     display: flex;
     width: 100%;
+    margin: 10px 0;
+    align-items: center;
 }
 
 .list-item p {
-    margin: 10px 0;
+    margin: 0;
 }
 
 .list-buttons {
@@ -69,4 +71,9 @@ h1 {
 
 .list-buttons a:hover {
     color: #3e31fa;
+}
+
+.textbox {
+    font-family: "RM Neue Bold", "RM Neue";
+    color: #0f2145;
 }

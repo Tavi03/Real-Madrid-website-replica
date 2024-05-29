@@ -36,14 +36,16 @@
                     break;
             }
         }
-
+        
         if (!isLogged()) {
             include "login-form.php";
         } else {
             printf('<div class="user-account">Welcome <b>%s</b> | <a href="index.php?comanda=logout">Logout</a></div>', getLoggedUser());
             printf('<div class="user-account"><a href="../index.php">Inapoi la pagina principala</a></div>');
             /* Userul e autentificat */
-
+            
+            echo "<div class='section'>";
+            echo "<h2>Anunturi</h2>";
             // Adaugare, modificare si stergere anunturi
             switch ($comanda) {
                 case 'delete_announcement':
@@ -129,12 +131,13 @@
 
                 default:
             }
-            echo "<div class='section'>";
             listAnunturi();
             include DIR_BASE . "admin/announcement-form.php";
             echo "</div>";
             echo "<div class='separator'></div>";
 
+            echo "<div class='section'>";
+            echo "<h2>Jucători de Fotbal</h2>";
             // Adaugare, modificare si stergere jucatori de fotbal
             switch ($comanda) {
                 case 'delete_football_player':
@@ -227,12 +230,13 @@
                     break;
                 default:
             }
-            echo "<div class='section'>";
             listJucatoriFotbal();
             include DIR_BASE . "admin/football-player-form.php";
             echo "</div>";
             echo "<div class='separator'></div>";
 
+            echo "<div class='section'>";
+            echo "<h2>Jucatori Baschet</h2>";
             // Adaugare, modificare si stergere jucatori de baschet
             switch ($comanda) {
                 case 'delete_basketball_player':
@@ -325,7 +329,6 @@
                     break;
                 default:
             }
-            echo "<div class='section'>";
             listJucatoriBaschet();
             include DIR_BASE . "admin/basketball-player-form.php";
             echo "</div>";

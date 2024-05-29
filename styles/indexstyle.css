@@ -37,7 +37,12 @@ body {
     height: auto;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    transition: transform 0.3s ease;
     /* border-radius: 50px; */
+}
+
+.main-image:hover {
+    transform: scale(1.05);
 }
 
 .secondary-article {
@@ -55,6 +60,11 @@ body {
     margin-left: auto;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
+.secondary-article-image:hover {
+    transform: scale(1.05);
 }
 
 .secondary-article h2 {
@@ -164,12 +174,12 @@ body {
 
 @media screen and (max-width: 600px) {
     .main-article {
-        flex-wrap: wrap;    
+        flex-wrap: wrap;
     }
 
     .main-article h1 {
         font-size: 1.5rem;
-        padding: 0 20px
+        padding: 0 20px;
     }
 
     .main-image {
