@@ -36,14 +36,14 @@
                     break;
             }
         }
-        
+
         if (!isLogged()) {
             include "login-form.php";
         } else {
             printf('<div class="user-account">Welcome <b>%s</b> | <a href="index.php?comanda=logout">Logout</a></div>', getLoggedUser());
             printf('<div class="user-account"><a href="../index.php">Inapoi la pagina principala</a></div>');
             /* Userul e autentificat */
-            
+
             echo "<div class='section'>";
             echo "<h2>Anunturi</h2>";
             // Adaugare, modificare si stergere anunturi
@@ -153,33 +153,33 @@
                     $nume = isset($_REQUEST["nume"]) ? $_REQUEST["nume"] : NULL;
                     $post = isset($_REQUEST["post"]) ? $_REQUEST["post"] : NULL;
                     $numar_tricou = isset($_REQUEST["numar_tricou"]) ? $_REQUEST["numar_tricou"] : NULL;
-                    $stmt = mysqli_prepare(
-                        $id_conexiune,
-                        "INSERT INTO echipa_fotbal(post, nume, numar_tricou) VALUES (?, ?, ?)"
-                    );
-                    if (!mysqli_stmt_bind_param($stmt, "ssi", $post, $nume, $numar_tricou)) {
-                        die('Eroare legare parametri: ' . mysqli_stmt_error($stmt));
+                    if ($nume && $post && $numar_tricou) {
+                        $stmt = mysqli_prepare(
+                            $id_conexiune,
+                            "INSERT INTO echipa_fotbal(post, nume, numar_tricou) VALUES (?, ?, ?)"
+                        );
+                        if (!mysqli_stmt_bind_param($stmt, "ssi", $post, $nume, $numar_tricou)) {
+                            die('Eroare legare parametri: ' . mysqli_stmt_error($stmt));
+                        }
+                        if (!mysqli_stmt_execute($stmt)) {
+                            die('Eroare : ' . mysqli_stmt_error($stmt));
+                        }
+                        echo "<div class='succes'>Jucatorul $nume a fost adaugat cu succes!</div>";
+                        $post = "";
+                        $nume = "";
+                        $numar_tricou = "";
+                    } else {
+                        echo "<div class='error'>Nu poti lasa campurile goale!</div>";
                     }
-                    if (!mysqli_stmt_execute($stmt)) {
-                        die('Eroare : ' . mysqli_stmt_error($stmt));
-                    }
-                    echo "<div class='succes'>Jucatorul $nume a fost adaugat cu succes!</div>";
-                    $post = "";
-                    $nume = "";
-                    $numar_tricou = "";
                     break;
                 case 'modify_football_player':
                     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['comanda']) && $_POST['comanda'] === 'modify_football_player') {
-                        // Handle form submission
                         $id = isset($_POST["id"]) ? $_POST["id"] : null;
                         $nume = isset($_POST["nume"]) ? $_POST["nume"] : null;
                         $post = isset($_POST["post"]) ? $_POST["post"] : null;
                         $numar_tricou = isset($_POST["numar_tricou"]) ? $_POST["numar_tricou"] : null;
-
-                        // Validate parameters
-                        if ($id === null || $nume === null || $post === null || $numar_tricou === null) {
-                            $eroareMesaj = 'Parametrii invalizi.';
-                            echo "<div class='error'>$eroareMesaj</div>";
+                        if ($id == null || $nume == null || $post == null || $numar_tricou === null) {
+                            echo "<div class='error'>Nu poti lasa campurile goale!</div>";
                         } else {
                             // Prepare the statement
                             $stmt = mysqli_prepare($id_conexiune, "UPDATE echipa_fotbal 
@@ -241,7 +241,6 @@
             switch ($comanda) {
                 case 'delete_basketball_player':
                     $id = $_REQUEST["id"];
-                    //TODO: validare parametrii
                     if (deleteBasketballPlayer($id)) {
                         echo "<div class='succes'>Intrarea cu id-ul $id a fost stearsa cu succes.</div>";
                     } else {
@@ -252,31 +251,34 @@
                     $nume = isset($_REQUEST["nume"]) ? $_REQUEST["nume"] : NULL;
                     $post = isset($_REQUEST["post"]) ? $_REQUEST["post"] : NULL;
                     $numar_tricou = isset($_REQUEST["numar_tricou"]) ? $_REQUEST["numar_tricou"] : NULL;
-                    $stmt = mysqli_prepare(
-                        $id_conexiune,
-                        "INSERT INTO echipa_baschet(post, nume, numar_tricou) VALUES (?, ?, ?)"
-                    );
-                    if (!mysqli_stmt_bind_param($stmt, "ssi", $post, $nume, $numar_tricou)) {
-                        die('Eroare legare parametri: ' . mysqli_stmt_error($stmt));
+                    if ($nume && $post && $numar_tricou) {
+                        $stmt = mysqli_prepare(
+                            $id_conexiune,
+                            "INSERT INTO echipa_baschet(post, nume, numar_tricou) VALUES (?, ?, ?)"
+                        );
+                        if (!mysqli_stmt_bind_param($stmt, "ssi", $post, $nume, $numar_tricou)) {
+                            die('Eroare legare parametri: ' . mysqli_stmt_error($stmt));
+                        }
+                        if (!mysqli_stmt_execute($stmt)) {
+                            die('Eroare : ' . mysqli_stmt_error($stmt));
+                        }
+                        echo "<div class='succes'>Jucatorul $nume a fost adaugat cu succes!</div>";
+                        $post = "";
+                        $nume = "";
+                        $numar_tricou = "";
+                    } else {
+                        echo "<div class='error'>Nu poti lasa campurile goale!</div>";
                     }
-                    if (!mysqli_stmt_execute($stmt)) {
-                        die('Eroare : ' . mysqli_stmt_error($stmt));
-                    }
-                    echo "<div class='succes'>Jucatorul $nume a fost adaugat cu succes!</div>";
-                    $post = "";
-                    $nume = "";
-                    $numar_tricou = "";
                     break;
                 case 'modify_basketball_player':
                     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['comanda']) && $_POST['comanda'] === 'modify_basketball_player') {
-                        // Handle form submission
                         $id = isset($_POST["id"]) ? $_POST["id"] : null;
                         $nume = isset($_POST["nume"]) ? $_POST["nume"] : null;
                         $post = isset($_POST["post"]) ? $_POST["post"] : null;
                         $numar_tricou = isset($_POST["numar_tricou"]) ? $_POST["numar_tricou"] : null;
 
                         // Validate parameters
-                        if ($id === null || $nume === null || $post === null || $numar_tricou === null) {
+                        if ($id == null || $nume == null || $post == null || $numar_tricou == null) {
                             $eroareMesaj = 'Parametrii invalizi.';
                             echo "<div class='error'>$eroareMesaj</div>";
                         } else {
